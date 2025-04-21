@@ -900,6 +900,8 @@ export namespace Prisma {
     id: string | null
     username: string | null
     password: string | null
+    firstName: string | null
+    lastName: string | null
     role: $Enums.Role | null
     imageUrl: string | null
   }
@@ -908,6 +910,8 @@ export namespace Prisma {
     id: string | null
     username: string | null
     password: string | null
+    firstName: string | null
+    lastName: string | null
     role: $Enums.Role | null
     imageUrl: string | null
   }
@@ -916,6 +920,8 @@ export namespace Prisma {
     id: number
     username: number
     password: number
+    firstName: number
+    lastName: number
     role: number
     imageUrl: number
     _all: number
@@ -926,6 +932,8 @@ export namespace Prisma {
     id?: true
     username?: true
     password?: true
+    firstName?: true
+    lastName?: true
     role?: true
     imageUrl?: true
   }
@@ -934,6 +942,8 @@ export namespace Prisma {
     id?: true
     username?: true
     password?: true
+    firstName?: true
+    lastName?: true
     role?: true
     imageUrl?: true
   }
@@ -942,6 +952,8 @@ export namespace Prisma {
     id?: true
     username?: true
     password?: true
+    firstName?: true
+    lastName?: true
     role?: true
     imageUrl?: true
     _all?: true
@@ -1023,6 +1035,8 @@ export namespace Prisma {
     id: string
     username: string
     password: string
+    firstName: string
+    lastName: string
     role: $Enums.Role
     imageUrl: string | null
     _count: UserCountAggregateOutputType | null
@@ -1048,6 +1062,8 @@ export namespace Prisma {
     id?: boolean
     username?: boolean
     password?: boolean
+    firstName?: boolean
+    lastName?: boolean
     role?: boolean
     imageUrl?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1056,6 +1072,8 @@ export namespace Prisma {
     id?: boolean
     username?: boolean
     password?: boolean
+    firstName?: boolean
+    lastName?: boolean
     role?: boolean
     imageUrl?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1064,6 +1082,8 @@ export namespace Prisma {
     id?: boolean
     username?: boolean
     password?: boolean
+    firstName?: boolean
+    lastName?: boolean
     role?: boolean
     imageUrl?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1072,11 +1092,13 @@ export namespace Prisma {
     id?: boolean
     username?: boolean
     password?: boolean
+    firstName?: boolean
+    lastName?: boolean
     role?: boolean
     imageUrl?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "role" | "imageUrl", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "firstName" | "lastName" | "role" | "imageUrl", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -1085,6 +1107,8 @@ export namespace Prisma {
       id: string
       username: string
       password: string
+      firstName: string
+      lastName: string
       role: $Enums.Role
       imageUrl: string | null
     }, ExtArgs["result"]["user"]>
@@ -1513,6 +1537,8 @@ export namespace Prisma {
     readonly id: FieldRef<"User", 'String'>
     readonly username: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
+    readonly firstName: FieldRef<"User", 'String'>
+    readonly lastName: FieldRef<"User", 'String'>
     readonly role: FieldRef<"User", 'Role'>
     readonly imageUrl: FieldRef<"User", 'String'>
   }
@@ -1899,6 +1925,8 @@ export namespace Prisma {
     id: 'id',
     username: 'username',
     password: 'password',
+    firstName: 'firstName',
+    lastName: 'lastName',
     role: 'role',
     imageUrl: 'imageUrl'
   };
@@ -1987,6 +2015,8 @@ export namespace Prisma {
     id?: StringFilter<"User"> | string
     username?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
+    firstName?: StringFilter<"User"> | string
+    lastName?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
     imageUrl?: StringNullableFilter<"User"> | string | null
   }
@@ -1995,6 +2025,8 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     role?: SortOrder
     imageUrl?: SortOrderInput | SortOrder
   }
@@ -2006,6 +2038,8 @@ export namespace Prisma {
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
     password?: StringFilter<"User"> | string
+    firstName?: StringFilter<"User"> | string
+    lastName?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
     imageUrl?: StringNullableFilter<"User"> | string | null
   }, "id" | "id" | "username">
@@ -2014,6 +2048,8 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     role?: SortOrder
     imageUrl?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -2028,6 +2064,8 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"User"> | string
     username?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
+    firstName?: StringWithAggregatesFilter<"User"> | string
+    lastName?: StringWithAggregatesFilter<"User"> | string
     role?: EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
     imageUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
@@ -2036,6 +2074,8 @@ export namespace Prisma {
     id?: string
     username: string
     password: string
+    firstName: string
+    lastName: string
     role: $Enums.Role
     imageUrl?: string | null
   }
@@ -2044,6 +2084,8 @@ export namespace Prisma {
     id?: string
     username: string
     password: string
+    firstName: string
+    lastName: string
     role: $Enums.Role
     imageUrl?: string | null
   }
@@ -2052,6 +2094,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -2060,6 +2104,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -2068,6 +2114,8 @@ export namespace Prisma {
     id?: string
     username: string
     password: string
+    firstName: string
+    lastName: string
     role: $Enums.Role
     imageUrl?: string | null
   }
@@ -2076,6 +2124,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -2084,6 +2134,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
     imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
@@ -2134,6 +2186,8 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     role?: SortOrder
     imageUrl?: SortOrder
   }
@@ -2142,6 +2196,8 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     role?: SortOrder
     imageUrl?: SortOrder
   }
@@ -2150,6 +2206,8 @@ export namespace Prisma {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     role?: SortOrder
     imageUrl?: SortOrder
   }
