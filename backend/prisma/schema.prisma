@@ -24,6 +24,8 @@ model User {
   imageUrl String?
 }
 
+
+
 enum Role {
   User
   Admin
